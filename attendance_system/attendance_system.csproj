@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72151DCB-F7C5-4201-9151-C4720C7CB2D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>attendance_system</RootNamespace>
+    <AssemblyName>attendance_system</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2013">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.CV.DebuggerVisualizers.VS2013.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\MySoftwares\mysql for vs\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windows-universal 3.0.0.2157\bin\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admincontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admincontrol.designer.cs">
+      <DependentUpon>admincontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="attendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendanceForm.Designer.cs">
+      <DependentUpon>attendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="classControl.Designer.cs">
+      <DependentUpon>classControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createClassControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="createClassControl.Designer.cs">
+      <DependentUpon>createClassControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="exitControl.designer.cs">
+      <DependentUpon>exitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="manageControl.designer.cs">
+      <DependentUpon>manageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faceRecognizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faceRecognizeForm.designer.cs">
+      <DependentUpon>faceRecognizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FaceRecognizer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homecontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homecontrol.designer.cs">
+      <DependentUpon>homecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecognizerEngine.cs" />
+    <Compile Include="recordsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recordsForm.Designer.cs">
+      <DependentUpon>recordsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registration.Designer.cs">
+      <DependentUpon>registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAttendanceForm.Designer.cs">
+      <DependentUpon>TakeAttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainingSetManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainingSetManage.designer.cs">
+      <DependentUpon>trainingSetManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateClassForm.Designer.cs">
+      <DependentUpon>updateClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateStudentForm.Designer.cs">
+      <DependentUpon>updateStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewRecordForm.Designer.cs">
+      <DependentUpon>viewRecordForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admincontrol.resx">
+      <DependentUpon>admincontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendanceForm.resx">
+      <DependentUpon>attendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classControl.resx">
+      <DependentUpon>classControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createClassControl.resx">
+      <DependentUpon>createClassControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exitControl.resx">
+      <DependentUpon>exitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageControl.resx">
+      <DependentUpon>manageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faceRecognizeForm.resx">
+      <DependentUpon>faceRecognizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homecontrol.resx">
+      <DependentUpon>homecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="recordsForm.resx">
+      <DependentUpon>recordsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registration.resx">
+      <DependentUpon>registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAttendanceForm.resx">
+      <DependentUpon>TakeAttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainingSetManage.resx">
+      <DependentUpon>trainingSetManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateClassForm.resx">
+      <DependentUpon>updateClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateStudentForm.resx">
+      <DependentUpon>updateStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewRecordForm.resx">
+      <DependentUpon>viewRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cvextern.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cvextern_test.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\haarcascade_eye.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\haarcascade_frontalface_alt_tree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\haarcascade_frontalface_default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\TextFile1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\XMLFile1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcp120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msvcr120.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg300_64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="traineddata\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
