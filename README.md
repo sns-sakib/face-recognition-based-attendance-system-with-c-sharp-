@@ -6,3 +6,11 @@ Library for face recognition : emgucv-windows-universal 3.0.0.2157 (download  th
 database: mysql 
 add reference of emgucv files, mysql.dll (you will find the dll file in the internet) 
 
+Features:
+1.Take attendance with Face Recognition system
+2. Option to take attenadance manually
+3. Upload student data with excel sheet or manually.
+4. Login system
+5. Manage course, student
+
+
