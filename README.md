@@ -3,8 +3,8 @@ using this project one can take attendance with face recognition system. A full 
 
 platform : Visual Studio 2013
 Library for face recognition : emgucv-windows-universal 3.0.0.2157 (download  this from https://sourceforge.net/projects/emgucv/files/emgucv/3.0.0/  and then install) 
-database: mysql 
-add reference of emgucv files, mysql.dll (you will find the dll file in the internet) 
+database: mysql . \n
+Add reference of emgucv files, mysql.dll (you will find the dll file in the internet) 
 
 Features:
 1.Take attendance with Face Recognition system( multiple face detection and recognition )
